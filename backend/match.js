@@ -3,14 +3,6 @@ const path = require('path');
 
 async function recommend_by_type(food, foodType) {
     return new Promise((resolve, reject) => {
-
-      const trainProcess = execFile('python', [path.join(__dirname, '../train_model.py')], (error, stdout, stderr) => {
-        if (error) {
-          console.error('Training Error:', stderr);
-          return reject(new Error('Model training failed'));
-        }
-  
-        console.log('Model training output:', stdout);
   
         const recommendProcess = execFile(
           'python', 
@@ -29,7 +21,7 @@ async function recommend_by_type(food, foodType) {
             }
           }
         );
-      });
+      
     });
   }
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { getFoods, getFoodTypes, matchFoods } from './utils/api';
 import axios from 'axios';
 
 export default function App() {
@@ -15,30 +16,38 @@ export default function App() {
 
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/food-types')
-      .then(response => {
-        setFoodTypes(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching food types:', error);
-      });
+    const loadFoodTypes = async () => {
+      try {
+        const types = await getFoodTypes();
+        setFoodTypes(types);
+        if (types.length > 0) {
+          setSelectedType(types[0]);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    
+    loadFoodTypes();
   }, []);
 
 
   useEffect(() => {
-    if (searchTerm.length > 0) {
-      axios.get(`http://localhost:8000/api/foods?search=${searchTerm}`)
-        .then(response => {
-          setFoods(response.data);
-          setShowDropdown(true);
-        })
-        .catch(error => {
-          console.error('Error searching foods:', error);
-        });
-    } else {
-      setFoods([]);
-      setShowDropdown(false);
-    }
+    const loadFoods = async () => {
+      try {
+        if (searchTerm.length === 0) {
+          setFoods([]);
+          setShowDropdown(false);
+          return;
+        }
+        const foodData = await getFoods(searchTerm);
+        setFoods(foodData);
+        setShowDropdown(true);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    loadFoods();
   }, [searchTerm]);
 
   const handleSearchChange = (e) => {
@@ -64,11 +73,9 @@ export default function App() {
 
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:8000/api/match', {
-        food: selectedFood.name,
-        foodType: selectedType
-      });
-      setMatches(response.data.recommendations);
+      const result = await matchFoods(selectedFood.name, selectedType);
+      console.log('Matches found:', result.matched_foods);
+      setMatches(result.matched_foods);
     } catch (error) {
       console.error('Error finding matches:', error);
       alert('Failed to find matches');
@@ -148,7 +155,7 @@ export default function App() {
               {matches.map((match, index) => (
                 <li key={index} className="p-3 bg-gray-50 rounded-md border border-gray-200">
                   <div className="flex justify-between items-center">
-                    <span className="text-black font-medium">{match.food}</span>
+                    <span className="text-black font-medium">{match.name}</span>
                     <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">
                       Score: {match.score.toFixed(2)}
                     </span>
