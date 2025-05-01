@@ -1,0 +1,529 @@
+{
+  "original_food_data": {
+    "ข้าวไข่เจียว": {
+      "spicy": 5,
+      "sweet": 2,
+      "sour": 3,
+      "salty": 0,
+      "texture": 2,
+      "type": "main"
+    },
+    "หมูปิ้ง": {
+      "spicy": 2,
+      "sweet": 3,
+      "sour": 1,
+      "salty": 2,
+      "texture": 1,
+      "type": "snack"
+    },
+    "ขนมจีบ": {
+      "spicy": 5,
+      "sweet": 5,
+      "sour": 4,
+      "salty": 5,
+      "texture": 2,
+      "type": "snack"
+    },
+    "เกี๊ยวทอด": {
+      "spicy": 3,
+      "sweet": 5,
+      "sour": 0,
+      "salty": 3,
+      "texture": 3,
+      "type": "snack"
+    },
+    "ข้าวผัด": {
+      "spicy": 5,
+      "sweet": 4,
+      "sour": 3,
+      "salty": 4,
+      "texture": 3,
+      "type": "main"
+    },
+    "หมูแดดเดียว": {
+      "spicy": 4,
+      "sweet": 1,
+      "sour": 5,
+      "salty": 2,
+      "texture": 1,
+      "type": "snack"
+    },
+    "น้ำอัดลม": {
+      "spicy": 0,
+      "sweet": 5,
+      "sour": 2,
+      "salty": 3,
+      "texture": 1,
+      "type": "drink"
+    },
+    "น้ำกระเจี๊ยบ": {
+      "spicy": 5,
+      "sweet": 4,
+      "sour": 0,
+      "salty": 5,
+      "texture": 3,
+      "type": "drink"
+    },
+    "แกงส้ม": {
+      "spicy": 3,
+      "sweet": 1,
+      "sour": 4,
+      "salty": 0,
+      "texture": 3,
+      "type": "main"
+    },
+    "ข้าวราดแกง": {
+      "spicy": 4,
+      "sweet": 1,
+      "sour": 1,
+      "salty": 1,
+      "texture": 3,
+      "type": "main"
+    },
+    "ซาลาเปา": {
+      "spicy": 5,
+      "sweet": 2,
+      "sour": 2,
+      "salty": 1,
+      "texture": 3,
+      "type": "snack"
+    },
+    "ผัดซีอิ๊ว": {
+      "spicy": 4,
+      "sweet": 1,
+      "sour": 3,
+      "salty": 2,
+      "texture": 1,
+      "type": "main"
+    },
+    "น้ำมะพร้าว": {
+      "spicy": 3,
+      "sweet": 0,
+      "sour": 5,
+      "salty": 0,
+      "texture": 3,
+      "type": "drink"
+    },
+    "ไส้กรอกทอด": {
+      "spicy": 4,
+      "sweet": 5,
+      "sour": 4,
+      "salty": 0,
+      "texture": 3,
+      "type": "snack"
+    },
+    "ต้มข่าไก่": {
+      "spicy": 5,
+      "sweet": 1,
+      "sour": 0,
+      "salty": 2,
+      "texture": 1,
+      "type": "main"
+    },
+    "นมสด": {
+      "spicy": 3,
+      "sweet": 2,
+      "sour": 1,
+      "salty": 2,
+      "texture": 2,
+      "type": "drink"
+    },
+    "น้ำแตงโมปั่น": {
+      "spicy": 1,
+      "sweet": 3,
+      "sour": 3,
+      "salty": 1,
+      "texture": 2,
+      "type": "drink"
+    },
+    "ชาเย็น": {
+      "spicy": 2,
+      "sweet": 0,
+      "sour": 0,
+      "salty": 4,
+      "texture": 1,
+      "type": "drink"
+    },
+    "นมเย็น": {
+      "spicy": 0,
+      "sweet": 4,
+      "sour": 3,
+      "salty": 2,
+      "texture": 1,
+      "type": "drink"
+    },
+    "ข้าวซอย": {
+      "spicy": 2,
+      "sweet": 0,
+      "sour": 4,
+      "salty": 5,
+      "texture": 3,
+      "type": "main"
+    },
+    "ข้าวมันไก่": {
+      "spicy": 1,
+      "sweet": 1,
+      "sour": 1,
+      "salty": 4,
+      "texture": 1,
+      "type": "main"
+    },
+    "ไข่เจียวหมูสับ": {
+      "spicy": 0,
+      "sweet": 2,
+      "sour": 0,
+      "salty": 5,
+      "texture": 1,
+      "type": "snack"
+    },
+    "น้ำองุ่น": {
+      "spicy": 0,
+      "sweet": 2,
+      "sour": 2,
+      "salty": 1,
+      "texture": 1,
+      "type": "drink"
+    },
+    "ทอดมัน": {
+      "spicy": 0,
+      "sweet": 5,
+      "sour": 3,
+      "salty": 1,
+      "texture": 2,
+      "type": "snack"
+    },
+    "น้ำมะนาว": {
+      "spicy": 4,
+      "sweet": 4,
+      "sour": 0,
+      "salty": 1,
+      "texture": 3,
+      "type": "drink"
+    },
+    "ราดหน้า": {
+      "spicy": 1,
+      "sweet": 2,
+      "sour": 5,
+      "salty": 1,
+      "texture": 2,
+      "type": "main"
+    },
+    "ข้าวหมูกรอบ": {
+      "spicy": 2,
+      "sweet": 3,
+      "sour": 4,
+      "salty": 5,
+      "texture": 2,
+      "type": "main"
+    },
+    "เฟรนช์ฟรายส์": {
+      "spicy": 2,
+      "sweet": 2,
+      "sour": 5,
+      "salty": 2,
+      "texture": 2,
+      "type": "snack"
+    },
+    "น้ำเก๊กฮวย": {
+      "spicy": 1,
+      "sweet": 2,
+      "sour": 2,
+      "salty": 4,
+      "texture": 1,
+      "type": "drink"
+    },
+    "ลูกชิ้นทอด": {
+      "spicy": 1,
+      "sweet": 1,
+      "sour": 1,
+      "salty": 1,
+      "texture": 3,
+      "type": "snack"
+    },
+    "ยำหมูยอ": {
+      "spicy": 3,
+      "sweet": 2,
+      "sour": 5,
+      "salty": 2,
+      "texture": 1,
+      "type": "snack"
+    },
+    "น้ำส้ม": {
+      "spicy": 1,
+      "sweet": 1,
+      "sour": 5,
+      "salty": 3,
+      "texture": 3,
+      "type": "drink"
+    },
+    "ชาดำเย็น": {
+      "spicy": 2,
+      "sweet": 1,
+      "sour": 3,
+      "salty": 3,
+      "texture": 1,
+      "type": "drink"
+    },
+    "แกงมัสมั่น": {
+      "spicy": 4,
+      "sweet": 2,
+      "sour": 5,
+      "salty": 2,
+      "texture": 2,
+      "type": "main"
+    },
+    "ปอเปี๊ยะทอด": {
+      "spicy": 2,
+      "sweet": 2,
+      "sour": 3,
+      "salty": 1,
+      "texture": 3,
+      "type": "snack"
+    },
+    "ข้าวหน้าเป็ด": {
+      "spicy": 2,
+      "sweet": 2,
+      "sour": 2,
+      "salty": 0,
+      "texture": 1,
+      "type": "main"
+    },
+    "ข้าวโพดทอด": {
+      "spicy": 5,
+      "sweet": 4,
+      "sour": 4,
+      "salty": 2,
+      "texture": 3,
+      "type": "snack"
+    },
+    "ข้าวหมูแดง": {
+      "spicy": 5,
+      "sweet": 2,
+      "sour": 0,
+      "salty": 4,
+      "texture": 2,
+      "type": "main"
+    },
+    "ขนมปังปิ้ง": {
+      "spicy": 0,
+      "sweet": 0,
+      "sour": 3,
+      "salty": 1,
+      "texture": 1,
+      "type": "snack"
+    },
+    "กาแฟเย็น": {
+      "spicy": 3,
+      "sweet": 0,
+      "sour": 2,
+      "salty": 1,
+      "texture": 1,
+      "type": "drink"
+    },
+    "ผัดไทย": {
+      "spicy": 0,
+      "sweet": 5,
+      "sour": 0,
+      "salty": 5,
+      "texture": 1,
+      "type": "main"
+    },
+    "โกโก้เย็น": {
+      "spicy": 1,
+      "sweet": 2,
+      "sour": 0,
+      "salty": 2,
+      "texture": 2,
+      "type": "drink"
+    },
+    "กุ้งชุบแป้งทอด": {
+      "spicy": 4,
+      "sweet": 5,
+      "sour": 4,
+      "salty": 5,
+      "texture": 3,
+      "type": "snack"
+    },
+    "ขนมจีนน้ำยา": {
+      "spicy": 4,
+      "sweet": 1,
+      "sour": 4,
+      "salty": 4,
+      "texture": 2,
+      "type": "main"
+    },
+    "ข้าวเหนียวหมูทอด": {
+      "spicy": 3,
+      "sweet": 1,
+      "sour": 2,
+      "salty": 4,
+      "texture": 2,
+      "type": "snack"
+    },
+    "กล้วยทอด": {
+      "spicy": 5,
+      "sweet": 3,
+      "sour": 4,
+      "salty": 2,
+      "texture": 2,
+      "type": "snack"
+    },
+    "ต้มยำกุ้ง": {
+      "spicy": 0,
+      "sweet": 5,
+      "sour": 3,
+      "salty": 0,
+      "texture": 2,
+      "type": "main"
+    },
+    "น้ำใบเตย": {
+      "spicy": 2,
+      "sweet": 3,
+      "sour": 2,
+      "salty": 4,
+      "texture": 2,
+      "type": "drink"
+    },
+    "ยำวุ้นเส้น": {
+      "spicy": 0,
+      "sweet": 0,
+      "sour": 5,
+      "salty": 0,
+      "texture": 3,
+      "type": "main"
+    },
+    "ชามะนาว": {
+      "spicy": 5,
+      "sweet": 3,
+      "sour": 2,
+      "salty": 4,
+      "texture": 1,
+      "type": "drink"
+    },
+    "ผัดกะเพรา": {
+      "spicy": 2,
+      "sweet": 0,
+      "sour": 5,
+      "salty": 5,
+      "texture": 2,
+      "type": "main"
+    },
+    "น้ำเปล่า": {
+      "spicy": 4,
+      "sweet": 3,
+      "sour": 0,
+      "salty": 3,
+      "texture": 1,
+      "type": "drink"
+    },
+    "ไก่ทอด": {
+      "spicy": 2,
+      "sweet": 2,
+      "sour": 5,
+      "salty": 4,
+      "texture": 2,
+      "type": "snack"
+    },
+    "เต้าหู้ทอด": {
+      "spicy": 5,
+      "sweet": 2,
+      "sour": 0,
+      "salty": 0,
+      "texture": 1,
+      "type": "snack"
+    },
+    "ชาเขียว": {
+      "spicy": 0,
+      "sweet": 2,
+      "sour": 5,
+      "salty": 3,
+      "texture": 3,
+      "type": "drink"
+    },
+    "น้ำฝรั่ง": {
+      "spicy": 4,
+      "sweet": 1,
+      "sour": 1,
+      "salty": 2,
+      "texture": 2,
+      "type": "drink"
+    },
+    "แหนมเนือง": {
+      "spicy": 4,
+      "sweet": 4,
+      "sour": 4,
+      "salty": 1,
+      "texture": 1,
+      "type": "snack"
+    },
+    "แกงเขียวหวาน": {
+      "spicy": 5,
+      "sweet": 3,
+      "sour": 2,
+      "salty": 4,
+      "texture": 1,
+      "type": "main"
+    },
+    "โอเลี้ยง": {
+      "spicy": 5,
+      "sweet": 1,
+      "sour": 4,
+      "salty": 4,
+      "texture": 2,
+      "type": "drink"
+    },
+    "ข้าวหมูกระเทียม": {
+      "spicy": 5,
+      "sweet": 4,
+      "sour": 5,
+      "salty": 0,
+      "texture": 2,
+      "type": "main"
+    },
+    "ข้าวกะเพราหมูกรอบ": {
+      "spicy": 5,
+      "sweet": 3,
+      "sour": 0,
+      "salty": 4,
+      "texture": 4,
+      "type": "main"
+    },
+    "ข้าวกะเพราหมูสับ": {
+      "spicy": 5,
+      "sweet": 3,
+      "sour": 0,
+      "salty": 4,
+      "texture": 2,
+      "type": "main"
+    },
+    "ข้าวกะเพราไก่": {
+      "spicy": 5,
+      "sweet": 3,
+      "sour": 0,
+      "salty": 3,
+      "texture": 1,
+      "type": "main"
+    },
+    "เนื้อย่าง": {
+      "spicy": 0,
+      "sweet": 1,
+      "sour": 0,
+      "salty": 4,
+      "texture": 4,
+      "type": "main"
+    },
+    "ข้าวหมูกรอบคั่วพริกเกลือ": {
+      "spicy": 4,
+      "sweet": 2,
+      "sour": 0,
+      "salty": 4,
+      "texture": 5,
+      "type": "main"
+    }
+  },
+  "food_types": [
+    "drink",
+    "main",
+    "snack"
+  ]
+}

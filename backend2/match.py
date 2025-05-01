@@ -8,6 +8,7 @@ import pandas as pd
 import sys
 import json
 import io
+import foodmatching as fm
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
@@ -60,10 +61,10 @@ def prepare_features(input_food, target_food, food_data, original_food_data=None
         food2_features = food_data.loc[target_food].values
         return np.concatenate([food1_features, food2_features])
 base_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(base_dir, 'modelnew_pickle.pkl')
+model_path = os.path.join(base_dir, 'model.pkl')
 
 if not os.path.exists(model_path):
-    model_path = os.path.join(os.path.dirname(base_dir), 'modelnew_pickle.pkl')
+    model_path = os.path.join(os.path.dirname(base_dir), 'model.pkl')
 
 try:
     MODEL_DATA = load_model(model_path)
@@ -73,6 +74,7 @@ except Exception as e:
     MODEL_DATA = None
 
 async def recommend_by_type(input_food, food_type, top_n=3):
+    fm.single_model_training('gradient_boosting')
     model_data = MODEL_DATA
     if model_data is None:
         try:
@@ -111,10 +113,17 @@ async def recommend_by_type(input_food, food_type, top_n=3):
             print(f"Error predicting for '{food}': {str(e)}", file=sys.stderr)
     recommendations.sort(key=lambda x: x[1], reverse=True)
     result = {
-        "input_food": input_food,
-        "input_type": original_df.loc[input_food, 'type'],
-        "target_type": food_type,
-        "recommendations": [{"food": food, "score": float(score)} for food, score in recommendations[:top_n]]
+        "original_food": {
+            "name": input_food,
+            "type": original_df.loc[input_food, 'type']
+        },
+        "matched_foods": [
+            {
+                "name": food,
+                "score": score,
+                "type": food_type
+            } 
+            for food, score in recommendations[:top_n]
+        ]
     }
-    
     return result
