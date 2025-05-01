@@ -6,23 +6,17 @@ from pydantic import BaseModel
 import json
 import os
 from typing import List, Optional
-
-# Import the function from match.py
-# Assuming match.py is in the same directory and has a function called recommend_by_type
 from match import recommend_by_type
 
 app = FastAPI()
 
-# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=["*"], 
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],  
+    allow_headers=["*"],  
 )
-
-# Load model data
 model_data = None
 try:
     with open("../model_data.json", "r", encoding="utf-8") as f:
@@ -30,7 +24,6 @@ try:
 except Exception as e:
     print(f"ไม่สามารถโหลด model_data.json ได้: {str(e)}")
 
-# Define response models
 class FoodItem(BaseModel):
     name: str
     type: str
@@ -39,7 +32,6 @@ class MatchRequest(BaseModel):
     food: str
     foodType: str
 
-# API routes
 @app.get("/api/foods", response_model=List[FoodItem])
 async def get_foods(search: Optional[str] = Query(None)):
     if not model_data:
@@ -78,7 +70,6 @@ async def match_foods(request: MatchRequest):
         print(f"Python matching error: {str(e)}")
         raise HTTPException(status_code=500, detail="Failed to run food matching model")
 
-# Serve static files in production
 if os.environ.get("ENVIRONMENT") == "production":
     app.mount("/", StaticFiles(directory="client/build", html=True), name="static")
     
@@ -86,7 +77,6 @@ if os.environ.get("ENVIRONMENT") == "production":
     async def serve_react_app(full_path: str):
         return FileResponse("client/build/index.html")
 
-# Run the application
 if __name__ == "__main__":
     import uvicorn
     port = int(os.environ.get("PORT", 8000))
